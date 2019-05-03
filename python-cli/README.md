@@ -25,3 +25,10 @@ Postgres CLI
 ```bash
 docker-compose exec postgres psql -U postgres
 ```
+
+Run shell inside container
+==========================
+
+```bash
+docker-compose run --entrypoint /bin/bash cli
+```
