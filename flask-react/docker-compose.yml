@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    ports:
+     - "5000:5000"
+    volumes:
+     - ./api/src:/app/src
+  gui:
+    build: ./gui
+    ports:
+     - "3000:3000"
+    volumes:
+     - ./gui/src:/app/src
+     - ./gui/public:/app/public
