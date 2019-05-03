@@ -5,7 +5,4 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 RUN pip install -r requirements.txt
 WORKDIR /app/src
-ENV FLASK_APP=server
-ENV FLASK_ENV=development
-ENTRYPOINT ["flask"]
-CMD ["run", "--host=0.0.0.0"]
+ENTRYPOINT ["python"]
