@@ -8,6 +8,7 @@ services:
     build: ./api
     ports:
      - "5000:5000"
+     - "5555:5555"
     volumes:
      - ./api/src:/app/src
   gui:
