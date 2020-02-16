@@ -1,0 +1,7 @@
+.bash_history
+.gitconfig
+.cache/
+.pylint.d/
+.vscode-server/
+.local/
+.mypy_cache/
