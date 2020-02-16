@@ -4,13 +4,21 @@ services:
     image: postgres
     environment:
       POSTGRES_PASSWORD: docker
+    ports:
+     - "5432:5432"
+
   api:
-    build: ./api
+    build:
+      context: ./api
+      dockerfile: .devcontainer/Dockerfile
     ports:
      - "5000:5000"
-     - "5555:5555"
     volumes:
-     - ./api/src:/app/src
+     - ./api:/home/vscode
+    user: vscode
+    working_dir: /home/vscode
+    command: ["flask", "run", "--host", "0.0.0.0"]
+
   gui:
     build: ./gui
     ports:

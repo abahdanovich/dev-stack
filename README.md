@@ -4,7 +4,7 @@ Running tests
 API/CLI
 
 ```bash
-docker-compose run --entrypoint pytest api tests
+docker-compose run api pytest
 ```
 
 GUI
@@ -18,7 +18,7 @@ Running CLI scripts
 ===================
 
 ```bash
-docker-compose run --entrypoint python api hello.py
+docker-compose run api python src/hello.py
 ```
 
 Loading db schema
@@ -39,5 +39,5 @@ Run shell inside container
 ==========================
 
 ```bash
-docker-compose run --entrypoint /bin/bash api
+docker-compose run api bash
 ```

@@ -1,5 +1,4 @@
 Flask
 pytest
 psycopg2-binary
-web-pdb
 python-dotenv
